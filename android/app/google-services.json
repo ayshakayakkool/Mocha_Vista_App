@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221128159498",
+    "project_id": "mochavista-82bbb",
+    "storage_bucket": "mochavista-82bbb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221128159498:android:3c69e71928b85940a34af3",
+        "android_client_info": {
+          "package_name": "com.example.mocha_vista"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXIphlpHe9zC_TpD6X2C9LgqRvxMtMKqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
