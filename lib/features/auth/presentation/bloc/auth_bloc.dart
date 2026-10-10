@@ -24,5 +24,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(AuthenticatedError(message: e.toString()));
       }
     });
+ 
+ on<SignupEvent>((event,emit)async{
+  
+
+ });
   }
 }

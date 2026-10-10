@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:mocha_vista/core/utlis/colors.dart';
 import 'package:mocha_vista/core/common/custom_text_form_field.dart';
+import 'package:mocha_vista/core/utlis/constant.dart';
+import 'package:mocha_vista/core/utlis/values.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignInPageState extends State<SignInPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -32,48 +34,55 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset('asset/images/logo.png', height: 150, width: 150),
             Text(
-              "Login with Email",
+              "Sign In",
               style: textTheme.headlineLarge?.copyWith(
                 color: ColorManager.cocoaBrown,
               ),
             ),
-            SizedBox(height: 20),
+            kSizedBox30,
             CustomTextFormField(
               hintText: "Enter Email",
               controller: emailController,
             ),
-            SizedBox(height: 20),
+            kSizedBox20,
             CustomTextFormField(
               obscureText: true,
               hintText: "Enter Password",
               controller: passwordController,
             ),
-            SizedBox(height: 20),
+            kSizedBox20,
             Container(
+              height: AppSize.s48,
+              width: AppSize.s250,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: ColorManager.darkBrown,
+              ),
               child: Center(
                 child: Text(
-                  "Login",
+                  "Sign In",
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     color: ColorManager.offWhite,
                   ),
                 ),
               ),
-              height: 48,
-              width: 250,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: ColorManager.darkBrown,
-              ),
             ),
-            SizedBox(height: 20),
+            kSizedBox20,
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("New here?", style: Theme.of(context).textTheme.bodySmall),
+                Text(
+                  "Don't have an Account?",
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/signUp');
+                  },
                   child: Text(
-                    "Register",
+                    "Sign up",
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mocha_vista/core/utlis/colors.dart';
+import 'package:mocha_vista/core/utlis/values.dart';
 import 'package:mocha_vista/features/auth/presentation/bloc/auth_bloc.dart';
 
 class SplashPageWrapper extends StatelessWidget {
@@ -25,18 +26,13 @@ class SplashPage extends StatelessWidget {
         if (state is Authenticated) {
           Navigator.pushReplacementNamed(context, '/home');
         } else if (state is UnAuthenticated) {
-          Navigator.pushReplacementNamed(context, '/login');
+          Navigator.pushReplacementNamed(context, '/signIn');
         }
       },
       child: Scaffold(
-        backgroundColor: ColorManager.darkBrown,
+        backgroundColor: ColorManager.primary,
         body: Center(
-          child: Image.asset(
-            'asset/images/splash.png',
-            height: 300,
-            width: 400,
-            fit: BoxFit.contain,
-          ),
+          child: Image.asset('asset/images/logo.png', fit: BoxFit.cover),
         ),
       ),
     );
