@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mocha_vista/core/theme/presentation/app_theme/app_theme.dart';
-import 'package:mocha_vista/core/utlis/colors.dart';
-import 'package:mocha_vista/features/auth/presentation/view/login_view.dart';
+import 'package:mocha_vista/features/auth/presentation/view/sign_in.dart';
+import 'package:mocha_vista/features/auth/presentation/view/sign_up.dart';
 import 'package:mocha_vista/features/home/presentation/view/home_view.dart';
 import 'package:mocha_vista/features/splash/presentation/view/splash_view.dart';
 import 'package:mocha_vista/firebase_options.dart';
@@ -32,8 +32,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => SplashPageWrapper(),
-        '/login': (context) => LoginPage(),
+        '/signIn': (context) => SignInPage(),
         '/home': (context) => HomePage(),
+        '/signUp':(context) => SignUp(),
       },
     );
   }
